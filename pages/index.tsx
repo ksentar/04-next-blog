@@ -1,13 +1,13 @@
-import { Board } from "../components/Board";
-import { Row } from "../components/Row";
+import { DefaultLayout } from "../layouts/DefaultLayout";
+import { Board } from "../components/board/Board";
 import { boards } from "../data/boards";
 const HomePage = () => {
   return (
-    <div>
+    <DefaultLayout>
       {boards.map((i, index) => {
         return <Board key={index} {...i} />;
       })}
-    </div>
+    </DefaultLayout>
   );
 };
 
