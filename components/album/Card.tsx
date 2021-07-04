@@ -1,10 +1,9 @@
 import { FC } from "react";
+import { cards } from "/home/ksentar/apps/04-next-blog/data/cards";
 
 export const Card: FC<{ id: number; text: string; created_at: string }> = (
   props
 ) => {
-  const i = Math.random();
-
   return (
     <div className="card shadow-sm">
       <svg
@@ -34,7 +33,13 @@ export const Card: FC<{ id: number; text: string; created_at: string }> = (
               Edit
             </button>
           </div>
-          <small className="text-muted"> {i} mins</small>
+          {cards.map((v) => {
+            return (
+              <div>
+                <small className="text-muted">11 mins</small>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
